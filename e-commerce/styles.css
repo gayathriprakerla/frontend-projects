@@ -1,0 +1,91 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color:#FFC8DD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.product-page {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width:1000px;
+    margin: 20px;
+}
+
+.product {
+    background-color:#DED7EC;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color:black;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+.product-description {
+    font-size: 18px;
+    color:#333333;
+    margin-bottom: 15px;
+    
+}
+
+.product-price {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333333;
+}
+
+.btn {
+    
+    padding: 10px 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    background-color:rgb(216, 164, 50);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color:rgb(216, 164, 50);
+}
+
+.btn-primary:hover {
+    background-color:burlywood;
+}
+@media (max-width: 1250px){
+    .product-page{
+    flex-direction: column;
+    }
+  }
