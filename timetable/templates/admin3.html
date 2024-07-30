@@ -1,0 +1,107 @@
+<html>
+<head>
+<!--
+<link rel="stylesheet" type="text/css" href="project.css">
+-->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='project.css') }}">
+
+<script language="javascript" type="text/javascript">
+    var branches={
+	BE:["Select Branch","CSE","ECE","EEE","MECH","TCE","ISE","CIV"],
+	MCA:["Select Branch"],
+	MTEC:["Select Branch","CSE","Machine Design"]
+	}
+	var semesters={
+	BE:["Select Semester","1","2","3","4","5","6","7","8"],
+        MCA:["Select Semester","1","2","3","4","5","6"],
+	MTEC:["Select Semester","1","2","3","4"]
+	}
+	function changecourse(value) {
+	if(value.length==0)
+	document.getElementById("branch").innerHTML="<option></option>";
+	else {
+	var catOptions="";
+	for(categoryId in branches[value]) {
+		catOptions+="<option>"+branches[value][categoryId]+"</option>";
+	}
+	document.getElementById("branch").innerHTML=catOptions;
+	}
+	}
+	/*function changecourse(value) {
+	if(value.length==0)
+	document.getElementById("semester").innerHTML="<option></option>";
+	else {
+	var catOptions="";
+	for(categoryId in semesters[value]) {
+		catOptions+="<option>"+semesters[value][categoryId]+"</option>";
+	}
+	document.getElementById("semester").innerHTML=catOptions;
+	}
+	}*/
+</script>
+<style>
+	body{
+	margin:25px;
+	}
+</style>
+</head>
+<title>Admin Portal</title>
+<body>
+<h1>ADMIN PORTAL</h1>
+<form action="zxc.html" method="get">
+<div class="margin-bottom">
+<label class="margin-right">ACADEMIC YEAR</label>
+<select id="year" name="year">
+				 <option value="">Select Year</option>
+                 
+                 <option value="2017-18">2017-18</option>
+				 </option>
+</select>
+</div>
+<div class="margin-bottom" id="category_course">
+<label class="margin-right">COURSE</label>
+<select id="course" name="course" onchange="changecourse(this.value);">
+                 <option value="">Select course</option>
+				 <option value="BE">BE</option>
+				 <option value="MCA">MCA</option>
+                 <option value="MTEC">M.TECH</option>
+</select>
+</div>
+<div class="margin-bottom" id="sub_category_branch">
+<label class="margin-right">BRANCH</label>
+<select id="branch" name="branch">
+				 <option value="">Select branch</option>
+</select>
+</div>
+<div class="margin-bottom" id="sub_category_semester">
+<label class="margin-right">SEMESTER</label>
+<select id="semester" name="semester">
+				 <option value="">Select semester</option>
+				 <option value="1">1 SEM</option>
+				 <option value="2">2 SEM</option>
+                 <option value="3">3 SEM</option>
+				 <option value="4">4 SEM</option>
+				 <option value="5">5 SEM</option>
+				 <option value="6">6 SEM</option>
+                 <option value="7">7 SEM</option>
+				 <option value="8">8 SEM</option>
+</select>
+</div>
+<div class="margin-bottom">
+<label class="margin-right">SECTION</label>
+<select id="section" name="section">
+				 <option value="">Select Section</option>
+                 <option value="A">A section</option>
+                 <option value="B">B section</option>
+</select>
+</div>
+<div style="display:flex">
+<div>
+<input type="submit" value="Get TimeTable"/></div>
+<div class="spacing">
+<button name="Edit" value="Edit" onclick="zxc.html"/>
+</div>
+</div>
+</form>
+</body>
+</html>

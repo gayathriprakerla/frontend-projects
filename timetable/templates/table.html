@@ -1,0 +1,24 @@
+<!doctype html>
+<style>
+ul{
+    list-style-type:none;
+
+}
+</style>
+<body>
+<center>
+    <p>TIME TABLE<br>
+Semester: IV   &nbsp    &nbsp
+    </p>
+
+
+<table width="150%">
+<ul>
+    {% for row in board %}
+        {% for i in row %}
+            <tr>{{ i }}<span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span></tr>
+        {% endfor %}
+        <br/>
+    {% endfor %}
+</ul>
+</table>
